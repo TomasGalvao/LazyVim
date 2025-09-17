@@ -34,7 +34,7 @@ local function find_root(markers)
 	return traverse_up(cwd) or cwd
 end
 
-local root_dir = find_root({ ".git", "mvnw", "gradlew" })
+local root_dir = find_root({ ".git", "mvnw", "gradlew", ".xml", "pom.xml" })
 
 return {
 	cmd = { "jdtls", "-configuration", configuration_dir, "-data", workspace_dir },
